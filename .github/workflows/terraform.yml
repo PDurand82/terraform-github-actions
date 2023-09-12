@@ -57,7 +57,7 @@ env:
   ARM_CLIENT_SECRET: ${{secrets.AZURE_CLIENT_SECRET}} #Azure variable needed for terraform
   ARM_SUBSCRIPTION_ID: ${{secrets.AZURE_SUBSCRIPTION_ID}} #Azure variable needed for terraform
   ARM_TENANT_ID: ${{secrets.AZURE_TENANT_ID}} #Azure variable needed for terraform
-  ROOT_PATH: '../../src/terraform' #This path was created for when terraform needs to run its plan, it is checking the proper directory for the execution files.
+  ROOT_PATH: '${{ github.workspace }}/src/terraform' #This path was created for when terraform needs to run its plan, it is checking the proper directory for the execution files.
 
 #permissions:
 #  contents: read
